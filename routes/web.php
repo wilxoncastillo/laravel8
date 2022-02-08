@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\CursoController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,11 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', HomeController::class)->name('home');
 
 
-Route::get('/cursos', function () {
-    return "cursos";
-});
+Route::get('/cursos', [CursoController::class, 'index'])->name('cursos.index');
+Route::get('/cursos/create', [CursoController::class, 'create'])->name('cursos.create');
+Route::get('/cursos/{curso}', [CursoController::class, 'show'])->name('cursos.show');
