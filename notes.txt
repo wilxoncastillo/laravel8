@@ -22,6 +22,24 @@ composer require doctrine/dbal
  Models
  protected $table = "xxx" // para las tablas que no cumple la norma
 
+ class Contact extends Model
+{
+    protected $table = 'TblContacts';
+    protected $primaryKey = 'Contacts_ID';
+
+    protected $keyType = 'string';
+    public $incrementing = false;
+}
+
+ php artisan make:factory CursoFactory --model=Curso
+
+eloquen
+->get() retorna una coleccion array
+->first() returna un objeto
+->find(id)
+
+
+
 
 
 
