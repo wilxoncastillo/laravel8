@@ -1,0 +1,12 @@
+php artisan make:fresh borras todas las tablas sin rollback Dropped All
+php artisan make:refresh hacer un rollback
+
+hp artisan make:migration  add_avartar_to_cursos_table
+
+Modificar columnas
+composer require doctrine/dbal
+
+ php artisan make:migration  change_properties_to_users_table
+
+ $table->string('avartar', 100)->nullable()->change();
+
