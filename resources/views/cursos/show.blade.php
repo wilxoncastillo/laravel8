@@ -12,4 +12,10 @@
 
     <a href="{{ route('cursos.index') }}">Regresar</a><br>
     <a href="{{ route('cursos.edit', $curso) }}">Editar</a>
+
+    <form action="{{ route('cursos.destroy', $curso) }}" method="post">
+        @csrf
+        @method('delete')
+        <button type="submit">Borrar</button>
+    </form>
 @endsection
