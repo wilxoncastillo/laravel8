@@ -19,6 +19,12 @@ class CursoController extends Controller
     
     public function store(Request $request) {
         
+        $request->validate([
+            'name' => 'required',
+            'description' => 'required',
+            'category' => 'required',
+        ]);
+
         $curso = Curso::create($request->all());
         
         return redirect()->route('cursos.show', compact('curso'));
@@ -35,7 +41,12 @@ class CursoController extends Controller
     }
 
     public function update(Request $request, Curso $curso) {
-        
+        $request->validate([
+            'name' => 'required',
+            'description' => 'required',
+            'category' => 'required',
+        ]);
+
         $curso->name = $request->get('name');
         $curso->description = $request->get('description');
         $curso->category = $request->get('category');
