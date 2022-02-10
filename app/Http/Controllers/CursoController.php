@@ -35,10 +35,8 @@ class CursoController extends Controller
     }
 
     public function update(CursoRequest $request, Curso $curso) {
-        $curso->name = $request->get('name');
-        $curso->description = $request->get('description');
-        $curso->category = $request->get('category');
-        $curso->save();
+
+        $curso->update($request->all());
         
         return redirect()->route('cursos.show', compact('curso'));
     }
