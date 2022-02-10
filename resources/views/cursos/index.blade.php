@@ -3,7 +3,7 @@
 @section('title', 'Main')
 
 @section('content')
-    <h1>index</h1>
+    <h1>Cursos</h1>
 
     <a href="{{ route('cursos.create') }}">Crear Curso</a>
     <ul>

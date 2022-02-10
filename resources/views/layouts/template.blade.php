@@ -6,8 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://cdn.xtailwindcss.com"></script>
     <title>@yield('title')</title>
+
+    <style>
+        .active {
+            color:red;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
+    @include('layouts.partials.header')
+    
     @yield('content')
+    
+    @include('layouts.partials.footer')
 </body>
 </html>
