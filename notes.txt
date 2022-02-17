@@ -38,6 +38,11 @@ eloquen
 ->first() returna un objeto
 ->find(id)
 
+--------------------
+send mail
+php artisan make:mail ContactMialable
+
+
 
 
 
