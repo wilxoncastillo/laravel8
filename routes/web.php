@@ -34,3 +34,7 @@ Route::view('/nosotros', 'nosotros')->name('nosotros');
 Route::get('/contactanos', [ContactanoController::class, 'index'])->name('contactanos.index'); 
 Route::post('/contactanos', [ContactanoController::class, 'store'])->name('contactanos.store'); 
 
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');

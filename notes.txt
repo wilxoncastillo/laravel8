@@ -42,6 +42,19 @@ eloquen
 send mail
 php artisan make:mail ContactMialable
 
+----------------------------------------------------------------
+Laravel Jetstream
+
+composer require laravel/jetstream
+
+php artisan jetstream:install livewire
+
+php artisan jetstream:install livewire --teams
+
+npm install
+npm run dev
+php artisan migrate
+
 
 
 
