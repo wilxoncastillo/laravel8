@@ -55,6 +55,10 @@ npm install
 npm run dev
 php artisan migrate
 
+componentes de clases
+componentes anonimos
+componentes dinamicos
+
 
 
 
