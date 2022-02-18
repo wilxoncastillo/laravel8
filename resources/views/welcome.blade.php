@@ -1,31 +1,10 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Laravel</title>
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-
-    <!-- Styles -->
-    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
-
-    @livewireStyles
-
-    <!-- Scripts -->
-    <script src="{{ mix('js/app.js') }}" defer></script>
-</head>
-
-@php
-    $color = 'red';
-    $alert = "alert2"
-@endphp
-
-<body>
-    <div class="container mx-auto">
+<x-AppLayout>
+    @php
+        $color = 'red';
+        $alert = "alert2"
+    @endphp
+    
+    <div class="container mx-auto mt-5">
         <x-alert :color="$color" class="mb-4">
             <x-slot name="title">
                 Titulo 1
@@ -59,6 +38,4 @@
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum excepturi ex inventore dolore officia adipisci quisquam necessitatibus reprehenderit, debitis deserunt eaque officiis atque aspernatur est enim eum velit nisi sed?
         </x-dynamic-component>
     </div>
-</body>
-
-</html>
+</x-AppLayout>
