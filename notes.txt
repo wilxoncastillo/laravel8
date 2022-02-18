@@ -65,6 +65,9 @@ componentes dinamicos
 active="false" pasa como cadena
 
 
+----------------------
+php artisan make:middleware EnsureTokenIsValid
+
 
 
 

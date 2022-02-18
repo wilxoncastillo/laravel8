@@ -38,3 +38,11 @@ Route::post('/contactanos', [ContactanoController::class, 'store'])->name('conta
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+Route::get('prueba', function () {
+    return "prueba";
+})->middleware(['auth:sanctum', 'age']);
+
+Route::get('no-autorizado', function () {
+    return "no-autorizado";
+});
