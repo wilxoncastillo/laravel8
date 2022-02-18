@@ -55,9 +55,14 @@ npm install
 npm run dev
 php artisan migrate
 
+php artisan vendor:publish --tag=jetstream-views
+
 componentes de clases
 componentes anonimos
 componentes dinamicos
+
+:active="false" componentes que pase boolean
+active="false" pasa como cadena
 
 
 
