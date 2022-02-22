@@ -117,7 +117,7 @@ Many To Many Relationships
 -Touching Parent Timestam
 
 ------------------
-
+Nota: solo para relacones n:n
 $user->roles()->attach() agregar
 $user->roles()->attach([1,2,3]) agregar
 

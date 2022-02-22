@@ -67,7 +67,15 @@ class User extends Authenticatable
         return $this->hasOne('App\Models\Profile');
     }
 
-    
+    //relacion 1:n
+    public function posts() {
+        return $this->hasMany('App\Models\Post');
+    }
+
+    public function videos() {
+        return $this->hasMany('App\Models\Video');
+    }
+
 
     // Relscion poliformcia
     public function comments() {
@@ -77,5 +85,10 @@ class User extends Authenticatable
     // relacion n:n
     public function roles() { 
         return $this->belongsToMany('App\Models\Role');
+    }
+
+    // Relacion 1:1 poliformica
+    public function image() {
+        return $this->morphOne('App\Models\Image', 'imageable');
     }
 }
