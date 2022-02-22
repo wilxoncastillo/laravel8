@@ -68,6 +68,54 @@ active="false" pasa como cadena
 ----------------------
 php artisan make:middleware EnsureTokenIsValid
 
+--------------------
+Relaciones
+-Defining Relationships
+One To One
+One To Many
+One To Many (Inverse) / Belongs To
+Has One Of Many
+Has One Through
+Has Many Through
+
+-Many To Many Relationships
+Retrieving Intermediate Table Columns
+Filtering Queries Via Intermediate Table Columns
+Defining Custom Intermediate Table Models
+
+-Polymorphic Relationships
+One To One
+One To Many
+One Of Many
+Many To Many
+Custom Polymorphic Types
+
+-Dynamic Relationships
+
+-Querying Relations
+Relationship Methods Vs. Dynamic Properties
+Querying Relationship Existence
+Querying Relationship Absence
+Querying Morph To Relationships
+
+-Aggregating Related Models
+Counting Related Models
+Other Aggregate Functions
+Counting Related Models On Morph To Relationships
+
+-Eager Loading
+Constraining Eager Loads
+Lazy Eager Loading
+Preventing Lazy Loading
+
+-Inserting & Updating Related Models
+The save Method
+The create Method
+Belongs To Relationships
+Many To Many Relationships
+
+-Touching Parent Timestam
+
 
 
 
