@@ -28,4 +28,9 @@ class Post extends Model
         return $this->morphOne('App\Models\Image', 'imageable');
     }
 
+    // relacion n:n polimorfica
+    public function posts() {
+        return $this->morphToMany('App\Models\Tag', 'taggable');
+    }
+
 }
