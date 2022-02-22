@@ -64,13 +64,18 @@ class User extends Authenticatable
         //$profile = Profile::where('user_id', $this->user->id)->first();
 
         //$this->hasOne(Profile::class, 'foreign_key', 'primary_key');
-        return $this->hasOne(Profile::class);
+        return $this->hasOne('App\Models\Profile');
     }
 
     
 
     // Relscion poliformcia
     public function comments() {
-        return $this->hasMany(Comments::class);
+        return $this->hasMany('App\Models\Comment');
+    }
+
+    // relacion n:n
+    public function roles() { 
+        return $this->belongsToMany('App\Models\Role');
     }
 }

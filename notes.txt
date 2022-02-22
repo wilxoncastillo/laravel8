@@ -116,6 +116,17 @@ Many To Many Relationships
 
 -Touching Parent Timestam
 
+------------------
+
+$user->roles()->attach() agregar
+$user->roles()->attach([1,2,3]) agregar
+
+$user->roles()->detach() quitar
+$user->roles()->detach([1,2,3]) quitar
+
+$user->roles()->sync([1,2]) elima todos los roles y luego asgina los nuevo roles
+
+
 
 
 

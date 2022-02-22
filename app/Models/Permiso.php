@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Permiso extends Model
 {
     use HasFactory;
+
+    // relacion n:n
+    public function rles() { 
+        return $this->belongsToMany('App\Models\Role');
+    }
+
+    
 }

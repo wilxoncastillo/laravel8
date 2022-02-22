@@ -16,7 +16,7 @@ class Comments extends Model
 
     //Relacion 1:n inversa
     public function user() {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo('App\Models\User');
     }
 
 

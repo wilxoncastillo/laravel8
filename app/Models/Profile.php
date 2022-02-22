@@ -13,6 +13,6 @@ class Profile extends Model
     public function user() {
         //$user = User::find($this->user_id);
         
-        return $this->belongsTo(User::class);
+        return $this->belongsTo('App\Models\User');
     }
 }
