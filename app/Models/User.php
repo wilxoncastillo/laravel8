@@ -66,4 +66,11 @@ class User extends Authenticatable
         //$this->hasOne(Profile::class, 'foreign_key', 'primary_key');
         return $this->hasOne(Profile::class);
     }
+
+    
+
+    // Relscion poliformcia
+    public function comments() {
+        return $this->hasMany(Comments::class);
+    }
 }
